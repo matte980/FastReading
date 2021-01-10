@@ -11,13 +11,13 @@ def go():
     global lbl, speed_arr, speed, level
     global easy_phrases, hard_phrases
     global restartB, goB
-
     #   GETS LEVEL
     if int(level.get())==1:
-        index = rand.randint(0,len(easy_phrases))
+        index = rand.randint(0,len(easy_phrases)-1)
+        print(index)
         tt = easy_phrases[index].split(sep = ' ')
     elif int(level.get())==2:
-        index = rand.randint(0,len(hard_phrases))
+        index = rand.randint(0,len(hard_phrases)-1)
         tt = hard_phrases[index].split(sep = ' ')
 
     #   SHOWS 3...2...1...
